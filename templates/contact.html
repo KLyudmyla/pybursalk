@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block nav_class_contact %} active {% endblock %}
+
+{% block title %} Контакты -PyBursa {% endblock title %}
+
+
+{% block content %}
+{% include "include/school_include.html" %}
+   <div class="media">
+  <div class="media-left">
+     <img class ="media-object" src="../static/images/1.jpg" alt="Director">
+  </div>
+  <div class="media-body">
+    <div class="contact">
+      <h2 class="media-heading"><a href="{% url 'index'%}">Director</a> 
+      </h2>
+      <p> <b>Name:</b> Ivan Ivanov</p> 
+      <p><b>Skype:</b> iivanov</p>
+      <p><b>Email:</b> iivanov@gmail.com</p> 
+      <p><b>Phone:</b> (000) 000-00-00</p>
+    </div>
+    <p>Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text </p>
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <img class="media-object" src="../static/images/2.jpg" alt="Manager">
+   </div>
+  <div class=" media-body">
+    
+    <div class="contact">
+      <h2 class="media-heading"><a href="{% url 'index'%}">Manager</a>  
+      </h2>
+      <p> <b>Name:</b> Ivan Ivanov</p> 
+      <p><b>Skype:</b> iivanov</p>
+      <p><b>Email:</b> iivanov@gmail.com</p> 
+      <p><b>Phone:</b> (000) 000-00-00</p>
+    </div>
+   <p>Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text </p>
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <img class="media-object" src="../static/images/3.jpg" alt="Founder">
+  </div>
+  <div class="media-body">
+    <div class="contact">
+      <h2 class="media-heading"><a href="{% url 'index'%}">Founder</a>  
+      </h2>
+      <p> <b>Name:</b> Ivan Ivanov</p> 
+      <p><b>Skype:</b> iivanov</p>
+      <p><b>Email:</b> iivanov@gmail.com</p> 
+      <p><b>Phone:</b> (000) 000-00-00</p>
+    </div>
+    <p>Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text </p>
+   
+   </div>
+{% endblock content %}
