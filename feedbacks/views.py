@@ -17,7 +17,9 @@ class FeedbackView(CreateView):
     def form_valid(self, form):
         response = super().form_valid(form)
         send_mail(form.cleaned_data['subject'], form.cleaned_data['message'],
-                  form.cleaned_data['from_email'], recipient_list=settings.ADMINS)
+                  form.cleaned_data['from_email'], recipient_list=['vlyuda@mail.ru', 'kaluzhynova@gmail.com'])
+
+#                  form.cleaned_data['from_email'], recipient_list=settings.ADMINS)
         messages.success(self.request, "Thank you for your feedback! We will keep in touch with you very soon!")
         return response
 

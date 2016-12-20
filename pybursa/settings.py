@@ -176,10 +176,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_files")
 
 ADMINS = ['admin', 'admin1']
 
-EMAIL_HOST = "127.0.0.1"
+#EMAIL_HOST = "127.0.0.1"
 
-EMAIL_PORT = "1025"
+#EMAIL_PORT = "1025"
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'kaluzhynova@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = 'user@domain.com'
+#EMAIL_HOST_PASSWORD = 'password'
+EMAIL_PORT = 587
 
 
 #import dj_database_url
@@ -192,8 +199,8 @@ ALLOWED_HOSTS = ['*']
 DEBUG = False
 
 try:
-    from .local_settings import *
+    from pybursa.local_settings import *
 except ImportError:
-    print ('ERROR local_setting')
+    print ('ERROR local_settings')
 
 
