@@ -20,23 +20,23 @@ class FeedbackView(CreateView):
     
     def form_valid(self, form):
         response = super().form_valid(form)
- #       send_mail(form.cleaned_data['subject'], form.cleaned_data['message'],
-  #                form.cleaned_data['from_email'], recipient_list=['vlyuda@mail.ru', 'kaluzhynova@gmail.com'])
+        send_mail(form.cleaned_data['subject'], form.cleaned_data['message'],
+                  form.cleaned_data['from_email'], recipient_list=['vlyuda@mail.ru', 'kaluzhynova@gmail.com'])
 
-#                  form.cleaned_data['from_email'], recipient_list=settings.ADMINS)
+                  form.cleaned_data['from_email'], recipient_list=settings.ADMINS)
    #     messages.success(self.request, "Thank you for your feedback! We will keep in touch with you very soon!")
 
 
-        sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
-        from_email = Email(form.cleaned_data['from_email'])
-        to_email = Email('kaluzhynova@gmail.com')
-        subject = form.cleaned_data['subject']
-        content = Content("text/plain", form.cleaned_data['message'])
-        mail = Mail(from_email, subject, to_email, content)
-        response = sg.client.mail.send.post(request_body=mail.get())
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
+ #       sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+ #       from_email = Email(form.cleaned_data['from_email'])
+ #       to_email = Email('kaluzhynova@gmail.com')
+ #       subject = form.cleaned_data['subject']
+ #       content = Content("text/plain", form.cleaned_data['message'])
+ #       mail = Mail(from_email, subject, to_email, content)
+ #       response = sg.client.mail.send.post(request_body=mail.get())
+ #       print(response.status_code)
+ #       print(response.body)
+ #       print(response.headers)
 
         messages.success(self.request, "Thank you for your feedback! We will keep in touch with you very soon!")
 
