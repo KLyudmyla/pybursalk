@@ -27,7 +27,7 @@ class FeedbackView(CreateView):
    #     messages.success(self.request, "Thank you for your feedback! We will keep in touch with you very soon!")
 
 
-        sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+        sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('pybursalk'))
         from_email = Email(form.cleaned_data['from_email'])
         to_email = Email('kaluzhynova@gmail.com')
         subject = form.cleaned_data['subject']
