@@ -176,13 +176,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_files")
 
 ADMINS = ['admin', 'admin1']
 
-EMAIL_HOST = "smpt.sendgrid.net"
 
-EMAIL_PORT = "587"
-
-EMAIL_HOST_USER = "Lyudmyla"
-
-EMAIL_HOST_PASSWORD = "pybursa80"
 
 
 
