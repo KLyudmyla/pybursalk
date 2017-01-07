@@ -177,7 +177,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_files")
 ADMINS = ['admin', 'admin1']
 
 
-
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'kaluzhynoval@gmail.com'
+EMAIL_HOST_PASSWORD = 'python_django'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'kaluzhynova@gmail.com'
 
 
 
