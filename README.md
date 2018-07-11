@@ -1,5 +1,4 @@
 # ooniversity_django_courses_05
 
-new line
+only one line
 
-one more line
